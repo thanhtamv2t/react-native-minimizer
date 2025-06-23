@@ -3,11 +3,19 @@ package com.kangfenmao.reactnativeminimizer;
 import androidx.annotation.NonNull;
 
 import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.module.annotations.ReactModule;
 import android.app.Activity;
 import android.content.Intent;
+
+// TurboModule support
+import com.facebook.react.bridge.NativeModule;
+import com.facebook.react.module.model.ReactModuleInfo;
+import com.facebook.react.module.model.ReactModuleInfoProvider;
+import com.facebook.react.TurboReactPackage;
+
+// New Architecture imports
+import com.facebook.react.bridge.ReactContextBaseJavaModule;
 
 @ReactModule(name = ReactNativeMinimizerModule.NAME)
 public class ReactNativeMinimizerModule extends ReactContextBaseJavaModule {

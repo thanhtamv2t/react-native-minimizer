@@ -6,7 +6,12 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
-const ReactNativeMinimizer = NativeModules.ReactNativeMinimizer
+// @ts-expect-error
+import NativeReactNativeMinimizer from './NativeReactNativeMinimizer';
+
+const ReactNativeMinimizer = NativeReactNativeMinimizer
+  ? NativeReactNativeMinimizer
+  : NativeModules.ReactNativeMinimizer
   ? NativeModules.ReactNativeMinimizer
   : new Proxy(
       {},
@@ -18,17 +23,14 @@ const ReactNativeMinimizer = NativeModules.ReactNativeMinimizer
     );
 
 export const minimize = (): void => {
-  console.log('minimize');
   ReactNativeMinimizer.minimize();
 };
 
 export const goBack = (): void => {
-  console.log('goBack');
   ReactNativeMinimizer.goBack();
 };
 
 export const exit = (): void => {
-  console.log('exit');
   ReactNativeMinimizer.exit();
 };
 

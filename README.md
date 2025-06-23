@@ -2,6 +2,8 @@
 
 Minimize or redirect back to previous APP, works on Android And iOS.
 
+✨ **Now supports React Native's New Architecture (TurboModules)** with full backwards compatibility!
+
 ## Installation
 
 ```sh
@@ -22,6 +24,10 @@ Minimizer.exit()
 // Return to the previous APP.
 Minimizer.goBack()
 ```
+
+## TurboModule Support
+
+This library supports React Native's New Architecture (TurboModules) for improved performance and type safety. See [TURBO_MODULE_SETUP.md](TURBO_MODULE_SETUP.md) for configuration details.
 
 ## Contributing
 
